@@ -1,5 +1,6 @@
 import { useState, useEffect, createContext } from "react";
 import Color from "./color";
+import Header from "./Header";
 
 export const ColorContext = createContext();
 export default function Generator() {
@@ -51,6 +52,7 @@ export default function Generator() {
   return (
     <ColorContext.Provider value={data}>
       <div>
+        <Header />
         <form>
           <input
             type="color"
@@ -71,7 +73,6 @@ export default function Generator() {
             button
           </button>
         </form>
-        <h1>Generator</h1>
         <Color />{" "}
       </div>
     </ColorContext.Provider>

@@ -5,12 +5,14 @@ export default function Color() {
 
   const colorEl = data
     ? data.map((color) => (
-        <div
-          className="color--column"
-          key={color.hex.clean}
-          style={{ backgroundColor: color.hex.value }}
-        ></div>
+        <div className="color--block" key={color.hex.clean}>
+          <div
+            className="color--cell"
+            style={{ backgroundColor: color.hex.value }}
+          ></div>
+          <input type="text" value={color.hex.value} name="hexValue" />
+        </div>
       ))
     : null;
-  return <div>{colorEl}</div>;
+  return <div className="color--palette">{colorEl}</div>;
 }

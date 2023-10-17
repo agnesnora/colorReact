@@ -4,43 +4,58 @@
   padding: 2rem;
   text-align: center;
 }
+body {
+  font-family: "Advent Pro", sans-serif;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+input,
+select,
+button {
+  font-family: "Advent Pro", sans-serif;
+}
+.color--palette {
+  margin: 2em;
+}
+.color--block {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.color--block > input {
+  display: block;
+  height: 2em;
+  /* margin-left: 1em; */
+  border: none;
+  font-size: 1em;
+  text-align: center;
+  width: 100px;
+  /* font-family: "Advent Pro", sans-serif; */
+}
+.color--cell {
+  width: 250px;
+  height: 90px;
+  margin: 0 0 5px 0;
+  border-radius: 8px;
+}
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+@media (min-width: 560px) {
+  .color--palette {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 120px));
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+    gap: 0.3em;
   }
-  to {
-    transform: rotate(360deg);
+  .color--cell {
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .color--block {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.color--column {
-  padding: 2em;
 }
