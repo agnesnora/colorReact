@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+
   text-align: center;
 }
 body {
@@ -13,6 +13,10 @@ input,
 select,
 button {
   font-family: "Advent Pro", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
 }
 .color--palette {
   margin: 2em;
@@ -42,9 +46,9 @@ button {
 @media (min-width: 560px) {
   .color--palette {
     display: grid;
-    margin: 0 auto;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 120px));
-
+    margin: 2em auto;
+    grid-template-columns: repeat(5, minmax(80px, 120px));
+    justify-content: center;
     gap: 0.3em;
   }
   .color--cell {

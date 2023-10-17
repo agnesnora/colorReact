@@ -45,13 +45,9 @@ export default function Generator() {
     });
   }
 
-  if (loading) {
-    return <h1>Loading...</h1>;
-  }
-
   return (
     <ColorContext.Provider value={data}>
-      <div>
+      <div className="container">
         <Header />
         <form>
           <input
@@ -73,7 +69,7 @@ export default function Generator() {
             button
           </button>
         </form>
-        <Color />{" "}
+        {loading ? <h1>Loading...</h1> : <Color />}
       </div>
     </ColorContext.Provider>
   );
