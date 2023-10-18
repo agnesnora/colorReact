@@ -1,6 +1,5 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 1020px;
 
   text-align: center;
 }
@@ -14,12 +13,12 @@ input,
 select {
   font-family: "Advent Pro", sans-serif;
   display: block;
-  background-color: fbe9f0;
+  background-color: #fbe9f0;
   color: #060606;
   margin: 0.3em auto;
 }
 select,
-button {
+button > .generate--btn {
   border-radius: 18px;
   padding: 0.5em;
   font-size: 1em;
@@ -29,7 +28,7 @@ button {
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-button {
+button > .generate--btn {
   font-family: "Advent Pro", sans-serif;
   width: 255px;
   margin: 0.3em auto;
@@ -73,6 +72,8 @@ input {
   width: 60px;
   margin: 1em;
   border: none;
+}
+.picked--color {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
@@ -105,13 +106,20 @@ header {
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0F7B", endColorstr="#F89B29", GradientType=1 );
 }
-.palette--container {
+.dark--palette--container {
   padding: 1em;
+  background-color: #060606;
 }
-h1 {
-  /* font-family: "Raleway", sans-serif; */
-  color: #c5c0c0;
+
+.light--palette--container {
+  background-color: #fff7ff;
+  padding: 1em;
+  color: #060606;
 }
+
+/* .color--block > .light--hexvalue {
+  color: #060606;
+} */
 
 .day {
   position: absolute;
@@ -126,12 +134,13 @@ h1 {
 .color--palette {
   margin: 2em;
 }
-.color--block {
+.light--color--block,
+.dark--color--block {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-.color--block > input {
+.dark--color--block > input {
   display: block;
   height: 2em;
   /* margin-left: 1em; */
@@ -142,6 +151,9 @@ h1 {
   background-color: transparent;
   color: #e5e5e5;
   /* font-family: "Advent Pro", sans-serif; */
+}
+.light--color--block > input {
+  background-color: transparent;
 }
 .color--cell {
   width: 250px;
@@ -167,7 +179,8 @@ h1 {
     align-items: center;
     justify-content: center;
   }
-  .color--block {
+  .light--color--block,
+  .dark--color--block {
     flex-direction: column;
     align-items: center;
     justify-content: center;

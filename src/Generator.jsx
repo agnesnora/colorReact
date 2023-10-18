@@ -7,6 +7,7 @@ export default function Generator() {
   const [data, setData] = useState([]);
   const [err, setErr] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [theme, setTheme] = useState("light");
   const [formData, setFormData] = useState({
     baseColor: "#EA054B",
     mode: "monochrome",
@@ -46,7 +47,7 @@ export default function Generator() {
   }
 
   return (
-    <ColorContext.Provider value={data}>
+    <ColorContext.Provider value={{ data, theme, setTheme }}>
       <div className="container">
         <Header />
         <form>
@@ -79,7 +80,7 @@ export default function Generator() {
           </button>
         </form>
       </div>
-      <div className="palette--container">
+      <div className={`${theme}--palette--container`}>
         {" "}
         {loading ? <h1>Loading...</h1> : <Color />}
       </div>
