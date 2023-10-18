@@ -26,21 +26,7 @@ button {
   font-weight: 600;
   cursor: pointer;
 }
-select {
-  /* appearance: none; */
-  /* safari */
-  /* -webkit-appearance: none; */
-  /* other styles for aesthetics */
-  /* width: 100%; */
-  /* font-size: 1.15rem;
-  padding: 0.675em 6em 0.675em 1em;
-  background-color: transparent;
-  border: 2px solid #f6d5f7;
 
-  border-radius: 18px;
-  color: #f6d5f7;
-  cursor: pointer; */
-}
 button {
   font-family: "Advent Pro", sans-serif;
   width: 255px;
@@ -88,6 +74,42 @@ input {
 
 header {
   color: #e5e5e5;
+  position: relative;
+}
+.container {
+  padding: 1em;
+  background: hsla(333, 100%, 53%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(333, 100%, 53%, 1) 0%,
+    hsla(33, 94%, 57%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(333, 100%, 53%, 1) 0%,
+    hsla(33, 94%, 57%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(333, 100%, 53%, 1) 0%,
+    hsla(33, 94%, 57%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0F7B", endColorstr="#F89B29", GradientType=1 );
+}
+h1 {
+  font-family: "Raleway", sans-serif;
+}
+
+.day {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
 }
 .container {
   margin: 0 auto;

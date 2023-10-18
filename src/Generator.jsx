@@ -78,6 +78,9 @@ export default function Generator() {
             Generate
           </button>
         </form>
+      </div>
+      <div className="palette--container">
+        {" "}
         {loading ? <h1>Loading...</h1> : <Color />}
       </div>
     </ColorContext.Provider>
