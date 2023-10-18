@@ -25,15 +25,18 @@ button {
   font-size: 1em;
   font-weight: 600;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 button {
   font-family: "Advent Pro", sans-serif;
   width: 255px;
   margin: 0.3em auto;
-  background-color: transparent;
-  color: #f6d5f7;
-  border: 2px solid #f6d5f7;
+  background-color: #f6d5f7;
+  color: #060606;
+  /* border: 2px solid #f6d5f7; */
+  border: none;
 }
 
 select option:checked,
@@ -70,6 +73,8 @@ input {
   width: 60px;
   margin: 1em;
   border: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 header {
@@ -78,30 +83,34 @@ header {
 }
 .container {
   padding: 1em;
-  background: hsla(333, 100%, 53%, 1);
+  background: hsla(333, 100%, 90%, 1);
 
   background: linear-gradient(
     90deg,
-    hsla(333, 100%, 53%, 1) 0%,
-    hsla(33, 94%, 57%, 1) 100%
+    hsla(333, 100%, 60%, 1) 0%,
+    hsla(33, 94%, 40%, 1) 100%
   );
 
   background: -moz-linear-gradient(
     90deg,
-    hsla(333, 100%, 53%, 1) 0%,
-    hsla(33, 94%, 57%, 1) 100%
+    hsla(333, 100%, 60%, 1) 0%,
+    hsla(33, 94%, 40%, 1) 100%
   );
 
   background: -webkit-linear-gradient(
     90deg,
-    hsla(333, 100%, 53%, 1) 0%,
-    hsla(33, 94%, 57%, 1) 100%
+    hsla(333, 100%, 60%, 1) 0%,
+    hsla(33, 94%, 40%, 1) 100%
   );
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0F7B", endColorstr="#F89B29", GradientType=1 );
 }
+.palette--container {
+  padding: 1em;
+}
 h1 {
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
+  color: #c5c0c0;
 }
 
 .day {
@@ -139,6 +148,9 @@ h1 {
   height: 90px;
   margin: 0 0 5px 0;
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 
 @media (min-width: 560px) {
