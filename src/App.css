@@ -8,13 +8,87 @@ body {
   font-family: "Advent Pro", sans-serif;
   max-width: 1020px;
   margin: 0 auto;
+  background-color: #060606;
 }
 input,
+select {
+  font-family: "Advent Pro", sans-serif;
+  display: block;
+  background-color: fbe9f0;
+  color: #060606;
+  margin: 0.3em auto;
+}
 select,
 button {
+  border-radius: 18px;
+  padding: 0.5em;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+select {
+  /* appearance: none; */
+  /* safari */
+  /* -webkit-appearance: none; */
+  /* other styles for aesthetics */
+  /* width: 100%; */
+  /* font-size: 1.15rem;
+  padding: 0.675em 6em 0.675em 1em;
+  background-color: transparent;
+  border: 2px solid #f6d5f7;
+
+  border-radius: 18px;
+  color: #f6d5f7;
+  cursor: pointer; */
+}
+button {
   font-family: "Advent Pro", sans-serif;
+  width: 255px;
+  margin: 0.3em auto;
+  background-color: transparent;
+  color: #f6d5f7;
+  border: 2px solid #f6d5f7;
 }
 
+select option:checked,
+select option:hover {
+  box-shadow: 0 0 10px 100px #060606 inset;
+}
+
+option {
+  font-family: "Advent Pro", sans-serif;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form > .generate--settings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+::-moz-color-swatch,
+input[type="color" i]::-webkit-color-swatch {
+  margin-inline: auto;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 8px;
+  display: block;
+}
+
+input {
+  height: 40px;
+  width: 60px;
+  margin: 1em;
+  border: none;
+}
+
+header {
+  color: #e5e5e5;
+}
 .container {
   margin: 0 auto;
 }
@@ -34,6 +108,8 @@ button {
   font-size: 1em;
   text-align: center;
   width: 100px;
+  background-color: transparent;
+  color: #e5e5e5;
   /* font-family: "Advent Pro", sans-serif; */
 }
 .color--cell {

@@ -50,23 +50,32 @@ export default function Generator() {
       <div className="container">
         <Header />
         <form>
-          <input
-            type="color"
-            name="baseColor"
-            value={formData.baseColor}
-            onChange={handleChange}
-          />
-          <select name="mode" onChange={handleChange} value={formData.mode}>
-            <option value="monochrome">Monochrome</option>
-            <option value="monochrome-dark">Monochrome-dark</option>
-            <option value="monochrome-light">Monochrome-light</option>
-            <option value="analogic">Analogic</option>
-            <option value="analogic-complement">Analogic-complement</option>
-            <option value="complement">Complement</option>
-            <option value="triad">Triad</option>
-          </select>
-          <button type="button" onClick={fetchData}>
-            button
+          <div className="generate--settings">
+            <input
+              type="color"
+              name="baseColor"
+              value={formData.baseColor}
+              onChange={handleChange}
+              className="picked--color"
+            />
+
+            {/* <label className="picker" htmlFor="baseColor" /> */}
+            <div className="custom-select">
+              {" "}
+              <select name="mode" onChange={handleChange} value={formData.mode}>
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">Monochrome-dark</option>
+                <option value="monochrome-light">Monochrome-light</option>
+                <option value="analogic">Analogic</option>
+                <option value="analogic-complement">Analogic-complement</option>
+                <option value="complement">Complement</option>
+                <option value="triad">Triad</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="button" className="generate--btn" onClick={fetchData}>
+            Generate
           </button>
         </form>
         {loading ? <h1>Loading...</h1> : <Color />}

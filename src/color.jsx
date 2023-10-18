@@ -10,7 +10,12 @@ export default function Color() {
             className="color--cell"
             style={{ backgroundColor: color.hex.value }}
           ></div>
-          <input type="text" value={color.hex.value} name="hexValue" />
+          <input
+            type="text"
+            value={color.hex.value}
+            name="hexValue"
+            onChange={() => console.log("copied")}
+          />
         </div>
       ))
     : null;
