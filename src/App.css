@@ -7,7 +7,7 @@ body {
   font-family: "Advent Pro", sans-serif;
   max-width: 1020px;
   margin: 0 auto;
-  background-color: #060606;
+  /* background-color: #060606; */
 }
 input,
 select {
@@ -18,8 +18,8 @@ select {
   margin: 0.3em auto;
 }
 select,
-button > .generate--btn {
-  border-radius: 18px;
+.light--generate--btn,
+.dark--generate--btn {
   padding: 0.5em;
   font-size: 1em;
   font-weight: 600;
@@ -27,17 +27,28 @@ button > .generate--btn {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-
-button > .generate--btn {
+button > .light--generate--btn,
+button > .light--day--night {
+  background-color: #f6d5f7;
+  color: #060606;
+  border-radius: 18px;
+}
+.dark--generate--btn,
+.dark--day--night {
+  background-color: #060606;
+  color: #f6d5f7;
+  border-radius: 8px;
+}
+.dark--generate--btn,
+.light--generate--btn {
   font-family: "Advent Pro", sans-serif;
   width: 255px;
   margin: 0.3em auto;
-  background-color: #f6d5f7;
-  color: #060606;
-  /* border: 2px solid #f6d5f7; */
-  border: none;
 }
-
+.palette--block {
+  height: 20px;
+  width: 20px;
+}
 select option:checked,
 select option:hover {
   box-shadow: 0 0 10px 100px #060606 inset;
@@ -121,12 +132,23 @@ header {
   color: #060606;
 } */
 
-.day {
+.light--day--night,
+.dark--day--night {
+  /* background-color: #fff7ff;
+  border: #fff7ff solid 1px; */
+  /* background-color: #060606;
+  border: transparent solid 1px; */
+  border-radius: 8px;
   position: absolute;
   top: 0px;
   right: 10px;
-  width: 40px;
-  height: 40px;
+
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 1.3em;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .container {
   margin: 0 auto;
@@ -172,6 +194,10 @@ header {
     grid-template-columns: repeat(5, minmax(80px, 120px));
     justify-content: center;
     gap: 0.3em;
+  }
+  .light--palette--container,
+  .dark--palette--container {
+    height: 100vh;
   }
   .color--cell {
     width: 100px;

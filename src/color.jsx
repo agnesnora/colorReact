@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ColorContext } from "./Generator";
 export default function Color() {
-  const { data, theme } = useContext(ColorContext);
+  const { data, theme, formData } = useContext(ColorContext);
 
   const colorEl = data
     ? data.map((color) => (
@@ -20,5 +20,11 @@ export default function Color() {
         </div>
       ))
     : null;
-  return <div className="color--palette">{colorEl}</div>;
+  return (
+    <div>
+      {" "}
+      <h1>{formData.mode}</h1>
+      <div className="color--palette">{colorEl}</div>
+    </div>
+  );
 }

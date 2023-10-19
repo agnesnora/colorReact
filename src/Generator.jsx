@@ -47,7 +47,7 @@ export default function Generator() {
   }
 
   return (
-    <ColorContext.Provider value={{ data, theme, setTheme }}>
+    <ColorContext.Provider value={{ data, theme, setTheme, formData }}>
       <div className="container">
         <Header />
         <form>
@@ -75,7 +75,11 @@ export default function Generator() {
             </div>
           </div>
 
-          <button type="button" className="generate--btn" onClick={fetchData}>
+          <button
+            type="button"
+            className={`${theme}--generate--btn `}
+            onClick={fetchData}
+          >
             Generate
           </button>
         </form>
