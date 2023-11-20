@@ -1,11 +1,9 @@
 #root {
-  max-width: 1020px;
-
   text-align: center;
 }
 body {
   font-family: "Advent Pro", sans-serif;
-  max-width: 1020px;
+  max-width: 2000px;
   margin: 0 auto;
   /* background-color: #060606; */
 }
@@ -90,14 +88,14 @@ input {
 }
 
 header {
-  color: #e5e5e5;
+  color: #060606;
   position: relative;
 }
 .container {
   padding: 1em;
-  background: hsla(333, 100%, 90%, 1);
+  background: #faf6ef;
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     hsla(333, 100%, 60%, 1) 0%,
     hsla(33, 94%, 40%, 1) 100%
@@ -113,13 +111,51 @@ header {
     90deg,
     hsla(333, 100%, 60%, 1) 0%,
     hsla(33, 94%, 40%, 1) 100%
-  );
+  ); */
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0F7B", endColorstr="#F89B29", GradientType=1 );
 }
+
+.bricktext--container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Adjust the column sizes as needed */
+  grid-template-rows: repeat(3, 200px); /* Set the row size as needed */
+  gap: 10px; /* Adjust the gap between cells as needed */
+  color: #faf6ef;
+}
+.bricktext--cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.create {
+  background-color: #f2d7ee;
+  color: #665250;
+  grid-column: span 2; /* This spans 2 columns */
+}
+
+.your {
+  background-color: #a17a79;
+  grid-column: span 1; /* This spans 1 column */
+  grid-row: span 2;
+}
+.rainbow {
+  grid-row: span 2;
+  background-color: #a5668b;
+}
+
+.sunshine {
+  grid-column: span 2;
+  background-color: #69306d;
+}
+.and {
+  background-color: #665250;
+}
 .dark--palette--container {
   padding: 1em;
-  background-color: #060606;
+  background-color: #0e103d;
 }
 
 .light--palette--container {
@@ -191,7 +227,7 @@ header {
   .color--palette {
     display: grid;
     margin: 2em auto;
-    grid-template-columns: repeat(5, minmax(80px, 120px));
+    grid-template-columns: repeat(5, minmax(120px, 1fr));
     justify-content: center;
     gap: 0.3em;
   }
@@ -200,8 +236,8 @@ header {
     height: 100vh;
   }
   .color--cell {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 50vh;
     align-items: center;
     justify-content: center;
   }
