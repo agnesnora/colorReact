@@ -1,6 +1,7 @@
 import { useState, useEffect, createContext } from "react";
 import Color from "./color";
 import Header from "./Header";
+import { FaArrowTurnDown } from "react-icons/fa6";
 
 export const ColorContext = createContext();
 export default function Generator() {
@@ -9,7 +10,7 @@ export default function Generator() {
   const [loading, setLoading] = useState(false);
   const [theme, setTheme] = useState("light");
   const [formData, setFormData] = useState({
-    baseColor: "#d8e2fe",
+    baseColor: "#33658a",
     mode: "monochrome-light",
   });
 
@@ -50,7 +51,9 @@ export default function Generator() {
     <ColorContext.Provider value={{ data, theme, setTheme, formData }}>
       <Header />
       <div className="container">
-        <p className="pick">Pick your color</p>
+        <p className="pick">
+          Pick your color and style <FaArrowTurnDown className="arrow" />
+        </p>
         <form>
           <div className="generate--settings">
             <input
