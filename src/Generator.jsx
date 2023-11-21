@@ -9,8 +9,8 @@ export default function Generator() {
   const [loading, setLoading] = useState(false);
   const [theme, setTheme] = useState("light");
   const [formData, setFormData] = useState({
-    baseColor: "#EA054B",
-    mode: "monochrome",
+    baseColor: "#d8e2fe",
+    mode: "monochrome-light",
   });
 
   const fetchData = async () => {
@@ -48,8 +48,9 @@ export default function Generator() {
 
   return (
     <ColorContext.Provider value={{ data, theme, setTheme, formData }}>
+      <Header />
       <div className="container">
-        <Header />
+        <p className="pick">Pick your color</p>
         <form>
           <div className="generate--settings">
             <input

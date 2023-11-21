@@ -11,25 +11,46 @@ input,
 select {
   font-family: "Advent Pro", sans-serif;
   display: block;
-  background-color: #fbe9f0;
+  /* background-color: #fbe9f0; */
   color: #060606;
   margin: 0.3em auto;
+  font-weight: 400;
+  font-size: 1em;
+
+  /* padding: 0.5em; */
 }
-select,
+select {
+  border: none;
+  padding: 1rem;
+}
+button {
+  width: 100%;
+}
+
 .light--generate--btn,
 .dark--generate--btn {
-  padding: 0.5em;
-  font-size: 1em;
-  font-weight: 600;
+  padding: 0.7em;
+  /* border: none; */
+  font-size: 1.2em;
+  font-weight: 400;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  text-transform: uppercase;
+
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px; */
 }
-button > .light--generate--btn,
-button > .light--day--night {
-  background-color: #f6d5f7;
-  color: #060606;
-  border-radius: 18px;
+.light--day--night {
+}
+.light--generate--btn {
+  background-color: #f7bcca;
+  color: #3d318a;
+  font-weight: 800;
+  border: none;
+  width: 100%;
+
+  /* background-color: #f6d5f7;
+  color: #060606; */
+  /* border-radius: 18px; */
 }
 .dark--generate--btn,
 .dark--day--night {
@@ -60,11 +81,16 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* background-color: #d8e2fe; */
+  margin-top: 5px;
+  padding: 0 1em;
 }
 form > .generate--settings {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 ::-moz-color-swatch,
@@ -72,19 +98,24 @@ input[type="color" i]::-webkit-color-swatch {
   margin-inline: auto;
   box-sizing: border-box;
   border: none;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   display: block;
 }
-
+.pick {
+  text-align: left;
+  font-family: "Neucha", cursive;
+  margin: 2em auto 0 1em;
+}
 input {
   height: 40px;
-  width: 60px;
+  width: 120px;
   margin: 1em;
   border: none;
+  padding: 0;
 }
 .picked--color {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px; */
 }
 
 header {
@@ -92,35 +123,13 @@ header {
   position: relative;
 }
 .container {
-  padding: 1em;
-  background: #faf6ef;
-
-  /* background: linear-gradient(
-    90deg,
-    hsla(333, 100%, 60%, 1) 0%,
-    hsla(33, 94%, 40%, 1) 100%
-  );
-
-  background: -moz-linear-gradient(
-    90deg,
-    hsla(333, 100%, 60%, 1) 0%,
-    hsla(33, 94%, 40%, 1) 100%
-  );
-
-  background: -webkit-linear-gradient(
-    90deg,
-    hsla(333, 100%, 60%, 1) 0%,
-    hsla(33, 94%, 40%, 1) 100%
-  ); */
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0F7B", endColorstr="#F89B29", GradientType=1 );
 }
 
 .bricktext--container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* Adjust the column sizes as needed */
-  grid-template-rows: repeat(3, 200px); /* Set the row size as needed */
-  gap: 10px; /* Adjust the gap between cells as needed */
+  grid-template-rows: repeat(3, 100px); /* Set the row size as needed */
+  gap: 5px; /* Adjust the gap between cells as needed */
   color: #faf6ef;
 }
 .bricktext--cell {
@@ -128,30 +137,50 @@ header {
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
-.create {
+.generate {
   background-color: #f2d7ee;
-  color: #665250;
+  color: #51138b;
   grid-column: span 2; /* This spans 2 columns */
+  font-weight: 800;
+  font-size: 2rem;
+  background-color: #f7bcca;
+  color: #3d318a;
 }
 
 .your {
   background-color: #a17a79;
   grid-column: span 1; /* This spans 1 column */
   grid-row: span 2;
+  background-color: #00b4ad;
+  background-color: #ebfffe;
+  background-color: #74a0fa;
+
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }
-.rainbow {
+.lovely {
   grid-row: span 2;
   background-color: #a5668b;
+  background-color: #fd349a;
+  background-color: #9f8dc3;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }
 
-.sunshine {
+.palettes {
   grid-column: span 2;
   background-color: #69306d;
+  background-color: #0546ed;
+  background-color: #74a0fa;
+  background-color: #ebfffe;
+  color: #74a0fa;
 }
-.and {
+.colour {
   background-color: #665250;
+  background-color: #51138b;
+  background-color: #3d318a;
 }
 .dark--palette--container {
   padding: 1em;
@@ -159,7 +188,7 @@ header {
 }
 
 .light--palette--container {
-  background-color: #fff7ff;
+  background-color: #fffffe;
   padding: 1em;
   color: #060606;
 }
@@ -214,7 +243,7 @@ header {
   background-color: transparent;
 }
 .color--cell {
-  width: 250px;
+  width: 100%;
   height: 90px;
   margin: 0 0 5px 0;
   border-radius: 8px;
