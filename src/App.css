@@ -263,6 +263,13 @@ header {
 }
 .colorscheme--container {
   margin: 0;
+  color: #383838;
+}
+.colorscheme--container > p {
+  font-size: 1.2em;
+}
+.hexvalue + div {
+  letter-spacing: 1em;
 }
 
 @media (min-width: 560px) {
