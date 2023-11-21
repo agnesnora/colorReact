@@ -21,7 +21,7 @@ export default function Color() {
       ))
     : null;
   return (
-    <div>
+    <div className="colorscheme--container">
       {" "}
       <h1>{formData.mode}</h1>
       <div className="color--palette">{colorEl}</div>

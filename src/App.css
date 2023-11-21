@@ -27,11 +27,6 @@ button {
   width: 100%;
 }
 
-.light--generate--btn,
-.dark--generate--btn {
-  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px; */
-}
 .light--day--night {
 }
 .light--generate--btn {
@@ -45,25 +40,33 @@ button {
   color: #060606; */
   /* border-radius: 18px; */
 }
-.dark--generate--btn,
+/* .dark--generate--btn,
 .dark--day--night {
   background-color: #060606;
   color: #f6d5f7;
   border-radius: 8px;
-}
+} */
 .dark--generate--btn,
 .light--generate--btn {
   font-family: "Advent Pro", sans-serif;
 
-  margin: 0.3em auto;
+  margin: 0.1em auto;
   padding: 0.7em;
 
-  font-size: 1.2em;
-  font-weight: 600;
+  font-size: 1.4em;
+  font-weight: 800;
   cursor: pointer;
   text-transform: uppercase;
+  border-radius: 6px;
+  transition: background-color 0.3s;
 }
-.palette--block {
+
+.light--generate--btn:hover {
+  background-color: #74a0fa;
+  color: #fffffe;
+}
+
+.light .palette--block {
   height: 20px;
   width: 20px;
 }
@@ -152,6 +155,7 @@ header {
   font-size: 2rem;
   background-color: #f7bcca;
   color: #3d318a;
+  opacity: 80%;
 }
 
 .your {
@@ -181,6 +185,7 @@ header {
   background-color: #74a0fa;
   background-color: #ebfffe;
   color: #74a0fa;
+  font-weight: 600;
 }
 .colour {
   background-color: #665250;
@@ -194,7 +199,7 @@ header {
 
 .light--palette--container {
   background-color: #fffffe;
-  padding: 1em;
+
   color: #060606;
 }
 
@@ -224,7 +229,7 @@ header {
   margin: 0 auto;
 }
 .color--palette {
-  margin: 2em;
+  margin: 1em;
 }
 .light--color--block,
 .dark--color--block {
@@ -251,10 +256,13 @@ header {
   width: 100%;
   height: 90px;
   margin: 0 0 5px 0;
-  border-radius: 8px;
+
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
     rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
     rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.colorscheme--container {
+  margin: 0;
 }
 
 @media (min-width: 560px) {
