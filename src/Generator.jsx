@@ -86,48 +86,57 @@ export default function Generator() {
     <ColorContext.Provider value={{ data, theme, setTheme, formData, loading }}>
       <div className={`${theme} container`}>
         <Header />
-        <div className="container--header">
-          {" "}
-          <p className={`${theme} pick`}>Pick your color and style</p>
-          <button className={`${theme} day--night`} onClick={toggleTheme}>
-            {theme === "light" ? <MdDarkMode /> : <MdOutlineLightMode />}
-          </button>
-          <PiFolderUserFill className="folder" />
-        </div>
-
-        <form>
-          <div className="generate--settings">
-            <input
-              type="color"
-              name="baseColor"
-              value={formData.baseColor}
-              onChange={handleColorChange}
-              className="picked--color"
-            />
-
-            {/* <label className="picker" htmlFor="baseColor" /> */}
-            <div className="custom-select">
-              {" "}
-              <select name="mode" onChange={handleChange} value={formData.mode}>
-                <option value="monochrome">Monochrome</option>
-                <option value="monochrome-dark">Monochrome-dark</option>
-                <option value="monochrome-light">Monochrome-light</option>
-                <option value="analogic">Analogic</option>
-                <option value="analogic-complement">Analogic-complement</option>
-                <option value="complement">Complement</option>
-                <option value="triad">Triad</option>
-              </select>
-            </div>
+        <div className={`${theme} settings--header`}>
+          <div className="container--header">
+            {" "}
+            <h1 className={`${theme} title`}>Color Scheme Generator</h1>
+            <button className={`${theme} day--night`} onClick={toggleTheme}>
+              {theme === "light" ? <MdDarkMode /> : <MdOutlineLightMode />}
+            </button>
+            <PiFolderUserFill className="folder" />
           </div>
+          <p className={`${theme} pick`}>Pick your color and style</p>
 
-          <button
-            type="button"
-            className={`generate--btn `}
-            onClick={handleGenerateClick}
-          >
-            Generate
-          </button>
-        </form>
+          <form>
+            <div className="generate--settings">
+              <input
+                type="color"
+                name="baseColor"
+                value={formData.baseColor}
+                onChange={handleColorChange}
+                className="picked--color"
+              />
+
+              {/* <label className="picker" htmlFor="baseColor" /> */}
+              <div className="custom-select">
+                {" "}
+                <select
+                  name="mode"
+                  onChange={handleChange}
+                  value={formData.mode}
+                >
+                  <option value="monochrome">Monochrome</option>
+                  <option value="monochrome-dark">Monochrome-dark</option>
+                  <option value="monochrome-light">Monochrome-light</option>
+                  <option value="analogic">Analogic</option>
+                  <option value="analogic-complement">
+                    Analogic-complement
+                  </option>
+                  <option value="complement">Complement</option>
+                  <option value="triad">Triad</option>
+                </select>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              className={`generate--btn `}
+              onClick={handleGenerateClick}
+            >
+              Generate
+            </button>
+          </form>
+        </div>
       </div>
       <div className={`${theme} palette--container`}>
         {" "}
