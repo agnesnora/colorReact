@@ -12,6 +12,7 @@ export default function Generator() {
   const [formData, setFormData] = useState({
     baseColor: "#33658a",
     mode: "monochrome-light",
+    newMode: "",
   });
 
   const fetchData = async () => {
@@ -38,17 +39,38 @@ export default function Generator() {
     fetchData();
   }, [0]);
 
-  function handleChange(event) {
-    setFormData((prevData) => {
-      return {
-        ...prevData,
-        [event.target.name]: event.target.value,
-      };
+  // function handleChange(event) {
+  //   setFormData((prevData) => {
+  //     return {
+  //       ...prevData,
+  //       [event.target.name]: event.target.value,
+  //     };
+  //   });
+  // }
+
+  const [selectedMode, setSelectedMode] = useState(formData.mode);
+  const handleChange = (event) => {
+    const newMode = event.target.value;
+    setSelectedMode(newMode);
+    setFormData((prevData) => ({
+      ...prevData,
+      mode: newMode,
+    }));
+    setTimeout(() => {
+      setFormData((prevData) => ({ ...prevData, newMode: newMode }));
+    }, 2500);
+  };
+
+  const handleGenerateClick = () => {
+    setFormData({
+      ...formData,
+      newMode: selectedMode,
     });
-  }
+    fetchData();
+  };
 
   return (
-    <ColorContext.Provider value={{ data, theme, setTheme, formData }}>
+    <ColorContext.Provider value={{ data, theme, setTheme, formData, loading }}>
       <Header />
       <div className="container">
         <p className="pick">
@@ -82,7 +104,7 @@ export default function Generator() {
           <button
             type="button"
             className={`${theme}--generate--btn `}
-            onClick={fetchData}
+            onClick={handleGenerateClick}
           >
             Generate
           </button>

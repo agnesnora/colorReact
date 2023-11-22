@@ -194,9 +194,12 @@ header {
 }
 .dark--palette--container {
   padding: 1em;
-  background-color: #0e103d;
+  background-color: #383838;
+  color: #fffffe;
 }
-
+.dark--palette--container .colorscheme--container > h1 {
+  color: #fffffe;
+}
 .light--palette--container {
   background-color: #fffffe;
 
