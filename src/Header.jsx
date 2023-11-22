@@ -18,9 +18,9 @@ export default function Header() {
   return (
     <header>
       {/* <h1>Color Scheme Generator</h1> */}
-      <div className="bricktext--container">{colorBrickText}</div>
+      <div className={`${theme} bricktext--container`}>{colorBrickText}</div>
       {/* <h3>Create beautiful color palettes</h3> */}
-      <button className={`${theme}--day--night`} onClick={toggleTheme}>
+      <button className={`${theme} day--night`} onClick={toggleTheme}>
         {theme === "light" ? <MdDarkMode /> : <MdOutlineLightMode />}
       </button>
     </header>

@@ -5,7 +5,7 @@ export default function Color() {
 
   const colorEl = data
     ? data.map((color) => (
-        <div className={`${theme}--color--block`} key={color.hex.clean}>
+        <div className={`${theme} color--block`} key={color.hex.clean}>
           <div
             className="color--cell"
             style={{ backgroundColor: color.hex.value }}

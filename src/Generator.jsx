@@ -72,7 +72,7 @@ export default function Generator() {
   return (
     <ColorContext.Provider value={{ data, theme, setTheme, formData, loading }}>
       <Header />
-      <div className="container">
+      <div className={`${theme} container`}>
         <p className="pick">
           Pick your color and style <FaArrowTurnDown className="arrow" />
         </p>
