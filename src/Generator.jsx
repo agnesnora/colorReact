@@ -2,6 +2,8 @@ import { useState, useEffect, createContext } from "react";
 import Color from "./color";
 import Header from "./Header";
 import { FaArrowTurnDown } from "react-icons/fa6";
+import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
+import { PiFolderUserFill } from "react-icons/pi";
 
 export const ColorContext = createContext();
 export default function Generator() {
@@ -11,10 +13,13 @@ export default function Generator() {
   const [theme, setTheme] = useState("light");
   const [formData, setFormData] = useState({
     baseColor: "#33658a",
+    color: "",
     mode: "monochrome-light",
     newMode: "",
   });
-
+  function toggleTheme() {
+    setTheme((prevTheme) => (prevTheme == "dark" ? "light" : "dark"));
+  }
   const fetchData = async () => {
     setLoading(true);
     try {
@@ -60,6 +65,14 @@ export default function Generator() {
       setFormData((prevData) => ({ ...prevData, newMode: newMode }));
     }, 2500);
   };
+  const handleColorChange = (event) => {
+    const newColor = event.target.value;
+
+    setFormData((prevData) => ({
+      ...prevData,
+      baseColor: newColor,
+    }));
+  };
 
   const handleGenerateClick = () => {
     setFormData({
@@ -71,18 +84,24 @@ export default function Generator() {
 
   return (
     <ColorContext.Provider value={{ data, theme, setTheme, formData, loading }}>
-      <Header />
       <div className={`${theme} container`}>
-        <p className="pick">
-          Pick your color and style <FaArrowTurnDown className="arrow" />
-        </p>
+        <Header />
+        <div className="container--header">
+          {" "}
+          <p className={`${theme} pick`}>Pick your color and style</p>
+          <button className={`${theme} day--night`} onClick={toggleTheme}>
+            {theme === "light" ? <MdDarkMode /> : <MdOutlineLightMode />}
+          </button>
+          <PiFolderUserFill className="folder" />
+        </div>
+
         <form>
           <div className="generate--settings">
             <input
               type="color"
               name="baseColor"
               value={formData.baseColor}
-              onChange={handleChange}
+              onChange={handleColorChange}
               className="picked--color"
             />
 
@@ -103,16 +122,19 @@ export default function Generator() {
 
           <button
             type="button"
-            className={`${theme}--generate--btn `}
+            className={`generate--btn `}
             onClick={handleGenerateClick}
           >
             Generate
           </button>
         </form>
       </div>
-      <div className={`${theme}--palette--container`}>
+      <div className={`${theme} palette--container`}>
         {" "}
         {loading ? <h1>Loading...</h1> : <Color />}
+        <button onClick={() => console.log("cili")} className={`${theme} save`}>
+          Save scheme to your profile
+        </button>
       </div>
     </ColorContext.Provider>
   );

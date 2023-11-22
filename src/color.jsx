@@ -23,7 +23,7 @@ export default function Color() {
   return (
     <div className="colorscheme--container">
       {" "}
-      <h1>{loading ? "" : formData.newMode}</h1>
+      <h1>{loading ? formData.mode : formData.newMode}</h1>
       <div className="color--palette">{colorEl}</div>
     </div>
   );
