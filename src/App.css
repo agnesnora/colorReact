@@ -270,6 +270,36 @@ h1 .title {
   justify-content: space-evenly;
   margin-left: 1em;
 }
+/* .saved--container {
+  padding: 2em;
+} */
+
+.scheme--saved {
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  padding-bottom: 5px;
+}
+.color--0 {
+  grid-column: span 2;
+}
+.color--1 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.color--2 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.color--3 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.color--4 {
+  grid-column: span 2;
+}
 .dark .pick {
   color: #f3f6fa;
 }

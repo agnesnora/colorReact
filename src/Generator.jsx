@@ -4,6 +4,7 @@ import Header from "./Header";
 import { FaArrowTurnDown } from "react-icons/fa6";
 import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { PiFolderUserFill } from "react-icons/pi";
+import SavedToProfile from "./SavedToProfile";
 
 export const ColorContext = createContext();
 export default function Generator() {
@@ -17,6 +18,15 @@ export default function Generator() {
     mode: "monochrome-light",
     newMode: "",
   });
+  const [savedSchemes, setSavedSchemes] = useState(() => {
+    const storedSchemes = localStorage.getItem("savedSchemes");
+    return storedSchemes ? JSON.parse(storedSchemes) : [];
+  });
+  const [profileOn, setProfileOn] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem("savedSchemes", JSON.stringify(savedSchemes));
+  }, [savedSchemes]);
   function toggleTheme() {
     setTheme((prevTheme) => (prevTheme == "dark" ? "light" : "dark"));
   }
@@ -43,15 +53,6 @@ export default function Generator() {
   useEffect(() => {
     fetchData();
   }, [0]);
-
-  // function handleChange(event) {
-  //   setFormData((prevData) => {
-  //     return {
-  //       ...prevData,
-  //       [event.target.name]: event.target.value,
-  //     };
-  //   });
-  // }
 
   const [selectedMode, setSelectedMode] = useState(formData.mode);
   const handleChange = (event) => {
@@ -80,10 +81,38 @@ export default function Generator() {
       newMode: selectedMode,
     });
     fetchData();
+    setProfileOn(false);
+    console.log(data);
+  };
+
+  const handleSaveClick = () => {
+    const newScheme = data.map((color, index) => ({
+      index,
+      value: color.hex.value,
+    }));
+    setSavedSchemes([...savedSchemes, newScheme]);
+
+    // setSavedSchemes([...savedSchemes, data.map((color) => color.hex.value)]);
+
+    console.log("saved", savedSchemes);
+  };
+  const handleProfileClick = () => {
+    setProfileOn(true);
   };
 
   return (
-    <ColorContext.Provider value={{ data, theme, setTheme, formData, loading }}>
+    <ColorContext.Provider
+      value={{
+        data,
+        theme,
+        setTheme,
+        formData,
+        loading,
+        savedSchemes,
+        handleProfileClick,
+        profileOn,
+      }}
+    >
       <div className={`${theme} container`}>
         <Header />
         <div className={`${theme} settings--header`}>
@@ -125,15 +154,19 @@ export default function Generator() {
             </button>
           </form>
         </div>
-        <div className={`${theme} palette--container`}>
-          {loading ? <h1>Loading...</h1> : <Color />}
-          <button
-            onClick={() => console.log("cili")}
-            className={`${theme} save`}
-          >
-            Save scheme to your profile
-          </button>
-        </div>
+        {!profileOn ? (
+          <div className={`${theme} palette--container`}>
+            {loading ? <h1>Loading...</h1> : <Color />}
+            <button onClick={handleSaveClick} className={`${theme} save`}>
+              Save scheme to your profile
+            </button>
+          </div>
+        ) : (
+          <SavedToProfile
+            setProfileOn={setProfileOn}
+            savedSchemes={savedSchemes}
+          />
+        )}
       </div>
     </ColorContext.Provider>
   );

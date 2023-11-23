@@ -1,10 +1,10 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ColorContext } from "./Generator";
 import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { PiFolderUserFill } from "react-icons/pi";
 export default function Header() {
   // const { theme } = useContext(ColorContext);
-  const { setTheme, theme } = useContext(ColorContext);
+  const { setTheme, theme, handleProfileClick } = useContext(ColorContext);
 
   function toggleTheme() {
     setTheme((prevTheme) => (prevTheme == "dark" ? "light" : "dark"));
@@ -26,7 +26,7 @@ export default function Header() {
         <button className={`${theme} day--night`} onClick={toggleTheme}>
           {theme === "light" ? <MdDarkMode /> : <MdOutlineLightMode />}
         </button>
-        <PiFolderUserFill className="folder" />
+        <PiFolderUserFill onClick={handleProfileClick} className="folder" />
       </div>
       {/* <p className={`${theme} pick`}>Pick your color and style</p> */}
       {/* <h3>Create beautiful color palettes</h3> */}

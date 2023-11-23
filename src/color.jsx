@@ -4,10 +4,10 @@ export default function Color() {
   const { data, theme, formData, loading } = useContext(ColorContext);
 
   const colorEl = data
-    ? data.map((color) => (
+    ? data.map((color, index) => (
         <div className={`${theme} color--block`} key={color.hex.clean}>
           <div
-            className="color--cell"
+            className={`color--cell color--cell--${index}`}
             style={{ backgroundColor: color.hex.value }}
           ></div>
           <input
@@ -20,6 +20,7 @@ export default function Color() {
         </div>
       ))
     : null;
+
   return (
     <div className="colorscheme--container">
       {" "}
