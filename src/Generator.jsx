@@ -12,7 +12,7 @@ export default function Generator() {
   const [loading, setLoading] = useState(false);
   const [theme, setTheme] = useState("light");
   const [formData, setFormData] = useState({
-    baseColor: "#33658a",
+    baseColor: "#ef38a9",
     color: "",
     mode: "monochrome-light",
     newMode: "",
