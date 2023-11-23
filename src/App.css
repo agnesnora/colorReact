@@ -33,10 +33,11 @@ input {
 button {
   width: 100%;
 }
-
+.light .generate--btn {
+  background-color: #cfb7f5;
+  color: #041c3b;
+}
 .generate--btn {
-  background-color: #f7bcca;
-  color: #3d318a;
   border: none;
   width: 100%;
   font-family: "Advent Pro", sans-serif;
@@ -51,8 +52,8 @@ button {
 }
 
 .generate--btn:hover {
-  background-color: #74a0fa;
-  color: #fffffe;
+  background-color: #f3f6fa;
+  color: #041c3b;
 }
 
 .light .palette--block {
@@ -90,11 +91,9 @@ form > .generate--settings {
 .title {
   grid-column: span 3;
   font-size: 1.4em;
+  text-transform: uppercase;
 }
 
-.dark .title {
-  color: #ebfffe;
-}
 .dark .settings--header {
   background-color: #16161a;
 }
@@ -130,27 +129,30 @@ header {
   font-size: 1.2rem;
 }
 .generate {
-  background-color: #f2d7ee;
-  color: #51138b;
   grid-column: span 2; /* This spans 2 columns */
   font-weight: 800;
   font-size: 2rem;
-  background-color: #f7bcca;
-  color: #3d318a;
-  opacity: 80%;
+}
+.dark .generate {
+  background-color: #041c3b;
+  color: #f3f6fa;
+}
+.light .generate {
+  background-color: #f3f6fa;
+  color: #041c3b;
 }
 
 .your {
   grid-column: span 1; /* This spans 1 column */
   grid-row: span 2;
-  background-color: #74a0fa;
+  background-color: #4b927e;
   writing-mode: vertical-rl;
   text-orientation: upright;
   font-size: 1rem;
 }
 .lovely {
   grid-row: span 2;
-  background-color: #9f8dc3;
+  background-color: #ef38a9;
   writing-mode: vertical-rl;
   text-orientation: upright;
   font-size: 0.9rem;
@@ -158,28 +160,28 @@ header {
 
 .palettes {
   grid-column: span 2;
-  background-color: #ebfffe;
+  background-color: #cfb7f5;
   color: #74a0fa;
   font-weight: 600;
 }
 .colour {
-  background-color: #3d318a;
+  background-color: #c2ee4a;
 }
 .palette--container {
   padding-bottom: 1em;
 }
 .dark .palette--container {
   padding: 1em;
-  background-color: #383838;
+  background: color #cfb7f5;
   color: #fffffe;
 }
 .dark .colorscheme--container > h1 {
   color: #fffffe;
 }
 .light .palette--container {
-  background-color: #fffffe;
+  background-color: #f3f6fa;
 
-  color: #060606;
+  color: #041c3b;
 }
 .save {
   width: 60%;
@@ -194,7 +196,15 @@ header {
   justify-content: center;
   gap: 10px;
 
-  padding-top: 1em;
+  padding: 1.3em;
+}
+.dark .container--header {
+  background-color: #f3f6fa;
+  color: #041c3b;
+}
+.light .container--header {
+  background-color: #041c3b;
+  color: #f3f6fa;
 }
 .folder {
   justify-self: center;
@@ -221,8 +231,9 @@ header {
 .light .folder {
   /* border: solid 1px #f7bcca; */
   border-radius: 5px;
-  background-color: #f7bcca;
-  opacity: 80%;
+  background-color: transparent;
+  color: #f3f6fa;
+  font-size: 1.5rem;
 }
 
 .dark .day--night,
@@ -234,11 +245,9 @@ header {
   margin: 0 auto;
 }
 
-.dark {
-  /* background-color: #383838; */
-  color: #fffffe;
+h1 .title {
+  color: #041c3b;
 }
-
 .color--palette {
   margin: 1em;
 }
