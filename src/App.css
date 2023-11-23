@@ -42,7 +42,7 @@ button {
   background-color: #4b927e;
 }
 .dark .generate--btn:hover {
-  background-color: #ef38a9;
+  background-color: #cfb7f5;
 }
 .generate--btn {
   border: none;
@@ -101,6 +101,7 @@ form > .generate--settings {
   grid-column: span 3;
   font-size: 1.2em;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .dark .settings--header {
@@ -184,7 +185,6 @@ header {
   padding-bottom: 1em;
 }
 .dark .palette--container {
-  padding: 1em;
   background: #0e1b17;
   color: #f3f6fa;
 }
@@ -193,7 +193,6 @@ header {
 }
 .light .palette--container {
   background-color: #f3f6fa;
-
   color: #0e1b17;
 }
 .save {
@@ -212,8 +211,6 @@ header {
   padding: 1.3em;
 }
 .dark .container--header {
-  background-color: #f3f6fa;
-  color: #0e1b17;
   background-color: #4b927e;
   color: #f3f6fa;
 }
@@ -225,6 +222,7 @@ header {
   justify-self: center;
   padding: 0.5rem;
   cursor: pointer;
+  font-size: 1.7em;
 }
 .day--night {
   /* border-radius: 8px; */
@@ -233,7 +231,7 @@ header {
   width: 35px;
   height: 35px;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.7em;
   cursor: pointer;
   /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px; */
@@ -254,7 +252,8 @@ header {
 
 .dark .day--night,
 .dark .folder {
-  /* border: solid 1px #fffffe; */
+  background-color: transparent;
+  color: #f3f6fa;
   border-radius: 5px;
 }
 .container {
@@ -264,13 +263,12 @@ header {
 h1 .title {
   color: #0e1b17;
 }
-.color--palette {
-  margin: 1em;
-}
+
 .color--block {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin-left: 1em;
 }
 .dark .pick {
   color: #f3f6fa;
@@ -309,12 +307,13 @@ h1 .title {
 .colorscheme--container > h1 {
   padding-top: 1em;
   margin-top: 0;
+  font-weight: 500;
 }
 .hexvalue + div {
   letter-spacing: 1em;
 }
 
-@media (min-width: 560px) {
+@media (min-width: 660px) {
   .color--palette {
     display: grid;
     margin: 2em auto;
