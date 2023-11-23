@@ -165,6 +165,7 @@ export default function Generator() {
           <SavedToProfile
             setProfileOn={setProfileOn}
             savedSchemes={savedSchemes}
+            theme={theme}
           />
         )}
       </div>

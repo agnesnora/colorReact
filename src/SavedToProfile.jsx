@@ -1,4 +1,4 @@
-export default function SavedToProfile({ setProfileOn, savedSchemes }) {
+export default function SavedToProfile({ setProfileOn, savedSchemes, theme }) {
   const closeProfile = () => {
     setProfileOn(false);
   };
@@ -23,14 +23,12 @@ export default function SavedToProfile({ setProfileOn, savedSchemes }) {
     ));
   };
   return (
-    <div>
+    <div className={`${theme} palette--container`}>
+      <div className="saved--container">
+        <h1>Your saved colorschemes</h1> <SchemesEl />
+      </div>
       <button onClick={closeProfile}>Close profile</button>
       <button onClick={clearLocalStorage}>Clear saved schemes</button>
-      <h1>SavedTOProfile component mounted</h1>
-      <div className="saved--container">
-        {" "}
-        <SchemesEl />
-      </div>
     </div>
   );
 }
