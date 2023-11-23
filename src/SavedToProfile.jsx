@@ -26,9 +26,13 @@ export default function SavedToProfile({ setProfileOn, savedSchemes, theme }) {
     <div className={`${theme} palette--container`}>
       <div className="saved--container">
         <h1>Your saved colorschemes</h1> <SchemesEl />
+        <button className="big--btn" onClick={closeProfile}>
+          Close profile
+        </button>
+        <button className="big--btn" onClick={clearLocalStorage}>
+          Clear saved schemes
+        </button>
       </div>
-      <button onClick={closeProfile}>Close profile</button>
-      <button onClick={clearLocalStorage}>Clear saved schemes</button>
     </div>
   );
 }

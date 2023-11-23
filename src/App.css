@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 #root {
   text-align: center;
 }
@@ -30,9 +34,7 @@ input {
   border: none;
   padding: 0;
 }
-button {
-  width: 100%;
-}
+
 .light .generate--btn {
   background-color: #cfb7f5;
   color: #0e1b17;
@@ -44,11 +46,25 @@ button {
 .dark .generate--btn:hover {
   background-color: #cfb7f5;
 }
-.generate--btn {
+/* .generate--btn {
   border: none;
   width: 100%;
   font-family: "Advent Pro", sans-serif;
   margin: 0.1em auto;
+  padding: 0.7em;
+  font-size: 1.4em;
+  font-weight: 800;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+} */
+
+.big--btn {
+  border: none;
+  width: 100%;
+  font-family: "Advent Pro", sans-serif;
+  margin: 0.3em auto;
   padding: 0.7em;
   font-size: 1.4em;
   font-weight: 800;
@@ -141,9 +157,13 @@ header {
 }
 .generate {
   grid-column: span 2; /* This spans 2 columns */
-  font-weight: 800;
+  font-weight: 600;
   font-size: 2rem;
+  letter-spacing: 2px;
 }
+/* .palette--container > button {
+  width: 83%;
+} */
 .dark .generate {
   background-color: #0e1b17;
   background-color: #0e1b17;
@@ -276,14 +296,23 @@ h1 .title {
 /* .saved--container {
   padding: 2em;
 } */
+/* 
+button {
+  margin: 0.4em 2em;
+  text-align: center;
+  width: 100%;
+} */
 
 .scheme--saved {
-  padding: 2em;
+  padding: 2em 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(3, 100px);
   gap: 5px;
   padding-bottom: 5px;
+}
+.saved--container {
+  margin: 0 1em;
 }
 
 .saved--container > h1 {
@@ -360,9 +389,9 @@ h1 .title {
     gap: 0.3em;
   }
 
-  .palette--container {
+  /* .palette--container {
     height: 100vh;
-  }
+  } */
   .color--cell {
     width: 100%;
     height: 50vh;

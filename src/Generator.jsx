@@ -147,7 +147,7 @@ export default function Generator() {
 
             <button
               type="button"
-              className={`generate--btn `}
+              className="generate--btn big--btn"
               onClick={handleGenerateClick}
             >
               Generate
@@ -157,7 +157,10 @@ export default function Generator() {
         {!profileOn ? (
           <div className={`${theme} palette--container`}>
             {loading ? <h1>Loading...</h1> : <Color />}
-            <button onClick={handleSaveClick} className={`${theme} save`}>
+            <button
+              onClick={handleSaveClick}
+              className={`${theme} save big--btn`}
+            >
               Save scheme to your profile
             </button>
           </div>
