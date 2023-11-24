@@ -52,6 +52,7 @@ export default function Color() {
   return (
     <div className="colorscheme--container">
       <h1>{loading ? formData.mode : formData.newMode}</h1>
+      <p>Click #hex to copy!</p>
       <div className="color--palette">{colorEl}</div>
     </div>
   );

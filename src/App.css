@@ -395,10 +395,10 @@ button {
   color: #383838;
 }
 .colorscheme--container > p {
-  font-size: 1.2em;
+  text-align: right;
+  padding-right: 1em;
 }
 .colorscheme--container > h1 {
-  padding-top: 1em;
   margin-top: 0;
   font-weight: 500;
 }
