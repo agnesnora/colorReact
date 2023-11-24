@@ -98,12 +98,15 @@ input {
   font-size: 0.8rem;
   position: absolute;
 
-  transform: translate(50%, 50%);
+  transform: translate(20%, 50%);
   font-weight: 600;
   background-color: #fffffe;
   padding: 0.5em 1em;
   border-radius: 6px;
   opacity: 80%;
+}
+.dark .color--value {
+  color: #0e1b17;
 }
 option {
   font-family: "Advent Pro", sans-serif;
