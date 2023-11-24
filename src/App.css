@@ -81,7 +81,7 @@ input {
 }
 
 .big--btn:hover {
-  background-color: grey;
+  background-color: #e2daeb;
 }
 
 /* .generate--btn:hover {
@@ -96,6 +96,14 @@ input {
 
 .color--value {
   font-size: 0.8rem;
+  position: absolute;
+
+  transform: translate(50%, 50%);
+  font-weight: 600;
+  background-color: #fffffe;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  opacity: 80%;
 }
 option {
   font-family: "Advent Pro", sans-serif;
@@ -390,10 +398,21 @@ button {
   margin-top: 0;
   font-weight: 500;
 }
-.hexvalue + div {
+/* .hexvalue + div {
   letter-spacing: 1em;
+} */
+.hexValue {
+  cursor: pointer;
+  background-color: transparent;
+  text-align: center;
 }
 
+.dark .hexValue {
+  color: #f3f6fa;
+}
+.light .hexValue {
+  color: #0e1b17;
+}
 @media (min-width: 660px) {
   .color--palette {
     display: grid;
