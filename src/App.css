@@ -440,4 +440,18 @@ button {
     align-items: center;
     justify-content: center;
   }
+  .container {
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr;
+    grid-template-rows: 300px auto;
+  }
+  header {
+    grid-column: span 1;
+  }
+  .settings--header {
+    grid-column: span 2;
+  }
+  .palette--container {
+    grid-column: span 3;
+  }
 }
