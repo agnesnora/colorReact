@@ -9,7 +9,7 @@ export default function Header() {
   function toggleTheme() {
     setTheme((prevTheme) => (prevTheme == "dark" ? "light" : "dark"));
   }
-  const brickText = ["generate", "your", "lovely", "colour", "palettes"];
+  const brickText = ["generate", "your", "lovely", "color", "palettes"];
   const colorBrickText = brickText.map((item) => (
     <div key={item} className={`bricktext--cell ${theme} ${item}`}>
       {item}

@@ -228,7 +228,7 @@ header {
 
   font-weight: 600;
 }
-.colour {
+.color {
   background-color: #c2ee4a;
 }
 .palette--container {
@@ -326,7 +326,7 @@ button {
 } */
 
 .scheme--saved {
-  padding: 2em 0;
+  padding: 1em 0 2em;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(3, 100px);
@@ -339,7 +339,8 @@ button {
 
 .saved--container > h1 {
   margin-top: 0;
-  padding-top: 1em;
+  font-weight: 600;
+  font-size: 1.4rem;
 }
 .color--0 {
   grid-column: span 2;

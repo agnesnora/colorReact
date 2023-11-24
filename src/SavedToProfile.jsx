@@ -41,7 +41,12 @@ export default function SavedToProfile({ setProfileOn, savedSchemes, theme }) {
   return (
     <div className={`${theme} palette--container`}>
       <div className="saved--container">
-        <h1>Your saved colorschemes</h1> <SchemesEl />
+        <h1>
+          {savedSchemes.length > 0
+            ? "Your saved colorschemes"
+            : "You didn't save anything yet"}
+        </h1>{" "}
+        <SchemesEl />
         <button className="big--btn" onClick={closeProfile}>
           Close profile
         </button>
