@@ -410,7 +410,7 @@ button {
 .light .hexValue {
   color: #0e1b17;
 }
-@media (min-width: 660px) {
+@media (min-width: 860px) {
   .color--palette {
     display: grid;
     margin: 2em auto;
@@ -422,13 +422,19 @@ button {
   form {
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 0.5em;
+    padding: 0 0.5em 0 0;
+  }
+  .pick {
+    font-size: 1rem;
+    padding-top: 0.5em;
   }
   .generate--btn {
-    width: 250px;
+    font-size: 1.2em;
+    width: 45%;
   }
   form > .generate--settings {
     width: 50%;
+    margin-left: 1.2em;
   }
   .picked-color {
     width: 100px;
