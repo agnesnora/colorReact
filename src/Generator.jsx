@@ -115,6 +115,14 @@ export default function Generator() {
     >
       <div className={`${theme} container`}>
         <Header />
+        <div className={`${theme} container--header`}>
+          {" "}
+          <h1 className={`${theme} title`}>Color Scheme Generator</h1>
+          <button className={`${theme} day--night`} onClick={toggleTheme}>
+            {theme === "light" ? <MdDarkMode /> : <MdOutlineLightMode />}
+          </button>
+          <PiFolderUserFill onClick={handleProfileClick} className="folder" />
+        </div>
         <div className={`${theme} settings--header`}>
           <p className={`${theme} pick`}>Pick your color and style</p>
           <form>

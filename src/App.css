@@ -51,19 +51,6 @@ input {
 .dark .generate--btn:hover {
   background-color: #cfb7f5;
 }
-/* .generate--btn {
-  border: none;
-  width: 100%;
-  font-family: "Advent Pro", sans-serif;
-  margin: 0.1em auto;
-  padding: 0.7em;
-  font-size: 1.4em;
-  font-weight: 800;
-  cursor: pointer;
-  text-transform: uppercase;
-  border-radius: 6px;
-  transition: background-color 0.3s;
-} */
 
 .big--btn {
   border: none;
@@ -83,11 +70,6 @@ input {
 .big--btn:hover {
   background-color: #e2daeb;
 }
-
-/* .generate--btn:hover {
-  background-color: #f3f6fa;
-  color: #0e1b17;
-} */
 
 .light .palette--block {
   height: 20px;
@@ -162,18 +144,29 @@ form > .generate--settings {
   height: 50px;
 }
 
-header {
-  color: #060606;
-  position: relative;
+.dark .header {
+  background-color: #0e1b17;
+}
+
+.light .header {
+  background-color: #f3f6fa;
 }
 
 .bricktext--container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(3, 60px);
+  grid-template-rows: repeat(3, auto);
   gap: 5px;
-  padding-bottom: 5px;
+  /* padding-bottom: 5px; */
+  margin-bottom: 0;
   color: #0e1b17;
+}
+.dark .bricktext--container {
+  background-color: #0e1b17;
+}
+
+.light .bricktext--container {
+  background-color: #f3f6fa;
 }
 .bricktext--cell {
   display: flex;
@@ -426,6 +419,23 @@ button {
     gap: 0.3em;
   }
 
+  form {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0.5em;
+  }
+  .generate--btn {
+    width: 250px;
+  }
+  form > .generate--settings {
+    width: 50%;
+  }
+  .picked-color {
+    width: 100px;
+  }
+  input {
+    min-width: 100px;
+  }
   /* .palette--container {
     height: 100vh;
   } */
@@ -443,15 +453,29 @@ button {
   .container {
     display: grid;
     grid-template-columns: 300px 1fr 1fr;
-    grid-template-rows: 300px auto;
+    grid-template-rows: auto auto; /* Adjusted grid-template-rows */
   }
+
   header {
     grid-column: span 1;
+    grid-row: span 2;
+    /* background-color: #f3f6fa; */
   }
+
+  .container--header {
+    grid-column: span 2;
+    grid-row: span 1;
+    padding: 0.3em;
+  }
+
   .settings--header {
     grid-column: span 2;
+    padding-bottom: 0;
   }
   .palette--container {
     grid-column: span 3;
+  }
+  .bricktext--container {
+    padding-bottom: 0.5em;
   }
 }

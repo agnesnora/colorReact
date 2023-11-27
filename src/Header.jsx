@@ -20,19 +20,14 @@ export default function Header() {
     <header>
       {/* <h1>Color Scheme Generator</h1> */}
       <div className={`${theme} bricktext--container`}>{colorBrickText}</div>
-      <div className={`${theme} container--header`}>
+      {/* <div className={`${theme} container--header`}>
         {" "}
         <h1 className={`${theme} title`}>Color Scheme Generator</h1>
         <button className={`${theme} day--night`} onClick={toggleTheme}>
           {theme === "light" ? <MdDarkMode /> : <MdOutlineLightMode />}
         </button>
         <PiFolderUserFill onClick={handleProfileClick} className="folder" />
-      </div>
-      {/* <p className={`${theme} pick`}>Pick your color and style</p> */}
-      {/* <h3>Create beautiful color palettes</h3> */}
-      {/* <button className={`${theme} day--night`} onClick={toggleTheme}>
-        {theme === "light" ? <MdDarkMode /> : <MdOutlineLightMode />}
-      </button> */}
+      </div> */}
     </header>
   );
 }
