@@ -16,7 +16,7 @@ export default function Generator() {
     baseColor: "#ef38a9",
     color: "",
     mode: "monochrome-light",
-    newMode: "",
+    newMode: "monochrome-light",
   });
   const [savedSchemes, setSavedSchemes] = useState(() => {
     const storedSchemes = localStorage.getItem("savedSchemes");

@@ -155,7 +155,7 @@ form > .generate--settings {
 .bricktext--container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(3, 1fr);
   gap: 5px;
   /* padding-bottom: 5px; */
   margin-bottom: 0;
@@ -216,6 +216,7 @@ form > .generate--settings {
   writing-mode: vertical-rl;
   text-orientation: upright;
   font-size: 0.9rem;
+  padding: 1em;
 }
 
 .palettes {
@@ -386,6 +387,7 @@ button {
 .colorscheme--container {
   margin: 0;
   color: #383838;
+  padding-top: 0.5em;
 }
 .colorscheme--container > p {
   text-align: right;
@@ -429,8 +431,8 @@ button {
     padding-top: 0.5em;
   }
   .generate--btn {
-    font-size: 1.2em;
-    width: 45%;
+    font-size: 1.3em;
+    width: 35%;
   }
   form > .generate--settings {
     width: 50%;
@@ -456,6 +458,9 @@ button {
     align-items: center;
     justify-content: center;
   }
+  .saved--container > h1 {
+    margin-top: 1em;
+  }
   .container {
     display: grid;
     grid-template-columns: 300px 1fr 1fr;
@@ -472,6 +477,10 @@ button {
     grid-column: span 2;
     grid-row: span 1;
     padding: 0.3em;
+    align-content: center;
+  }
+  .title {
+    font-size: 1.7em;
   }
 
   .settings--header {

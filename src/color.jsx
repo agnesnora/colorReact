@@ -13,7 +13,6 @@ const CopyToClipboard = ({ text }) => {
       console.error("Failed to copy text: ", err);
     }
 
-    // Reset the "Copied" status after a short delay
     setTimeout(() => {
       setIsCopied(false);
     }, 1500);
