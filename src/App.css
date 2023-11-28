@@ -388,6 +388,7 @@ button {
   margin: 0;
   color: #383838;
   padding-top: 0.5em;
+  margin-right: 1em;
 }
 .colorscheme--container > p {
   text-align: right;
@@ -461,6 +462,8 @@ button {
   .saved--container > h1 {
     margin-top: 1em;
   }
+  .saved--container {
+  }
   .container {
     display: grid;
     grid-template-columns: 300px 1fr 1fr;
@@ -478,6 +481,7 @@ button {
     grid-row: span 1;
     padding: 0.3em;
     align-content: center;
+    height: 96.5px;
   }
   .title {
     font-size: 1.7em;
@@ -486,6 +490,7 @@ button {
   .settings--header {
     grid-column: span 2;
     padding-bottom: 0;
+    align-self: end;
   }
   .palette--container {
     grid-column: span 3;
