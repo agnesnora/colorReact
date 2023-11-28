@@ -90,11 +90,8 @@ export default function Generator() {
       index,
       value: color.hex.value,
     }));
+
     setSavedSchemes([...savedSchemes, newScheme]);
-
-    // setSavedSchemes([...savedSchemes, data.map((color) => color.hex.value)]);
-
-    console.log("saved", savedSchemes);
   };
   const handleProfileClick = () => {
     setProfileOn(true);
@@ -177,6 +174,7 @@ export default function Generator() {
             setProfileOn={setProfileOn}
             savedSchemes={savedSchemes}
             theme={theme}
+            setSavedSchemes={setSavedSchemes}
           />
         )}
       </div>

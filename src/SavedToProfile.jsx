@@ -1,12 +1,17 @@
-export default function SavedToProfile({ setProfileOn, savedSchemes, theme }) {
+export default function SavedToProfile({
+  setProfileOn,
+  savedSchemes,
+  theme,
+  setSavedSchemes,
+}) {
   const closeProfile = () => {
     setProfileOn(false);
   };
 
   const clearLocalStorage = () => {
     localStorage.clear();
+    setSavedSchemes([]);
   };
-  console.log(savedSchemes);
 
   const SchemesEl = () => {
     return savedSchemes.map((scheme, schemeIndex) => (
