@@ -1,7 +1,7 @@
 import { useState, useEffect, createContext } from "react";
 import Color from "./color";
 import Header from "./Header";
-import { FaArrowTurnDown } from "react-icons/fa6";
+
 import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { PiFolderUserFill } from "react-icons/pi";
 import SavedToProfile from "./SavedToProfile";
@@ -11,7 +11,7 @@ export default function Generator() {
   const [data, setData] = useState([]);
   const [err, setErr] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   const [formData, setFormData] = useState({
     baseColor: "#ef38a9",
     color: "",
@@ -82,7 +82,6 @@ export default function Generator() {
     });
     fetchData();
     setProfileOn(false);
-    console.log(data);
   };
 
   const handleSaveClick = () => {

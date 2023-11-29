@@ -24,7 +24,7 @@ const CopyToClipboard = ({ text }) => {
         type="text"
         value={text}
         name="hexValue"
-        onChange={() => console.log("copied")}
+        // onChange={() => console.log("copied")}
         className={`${theme} hexValue`}
         onClick={handleCopyClick}
       />

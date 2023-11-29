@@ -34,7 +34,10 @@ input {
   border: none;
   padding: 0;
 }
-
+.day--night:hover,
+.folder:hover {
+  background-color: #ef38a9;
+}
 .light .generate--btn {
   background-color: #cfb7f5;
   color: #0e1b17;
@@ -124,6 +127,8 @@ form > .generate--settings {
   font-size: 1.2em;
   text-transform: uppercase;
   margin: 0;
+  justify-self: left;
+  margin-left: 1em;
 }
 
 .dark .settings--header {
@@ -157,7 +162,7 @@ form > .generate--settings {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(3, 1fr);
   gap: 5px;
-  /* padding-bottom: 5px; */
+  padding-bottom: 5px;
   margin-bottom: 0;
   color: #0e1b17;
 }
@@ -388,8 +393,9 @@ button {
   margin: 0;
   color: #383838;
   padding-top: 0.5em;
-  margin-right: 1em;
+  padding-right: 1em;
 }
+
 .colorscheme--container > p {
   text-align: right;
   padding-right: 1em;
@@ -429,7 +435,7 @@ button {
   }
   .pick {
     font-size: 1rem;
-    padding-top: 0.5em;
+    padding-top: 0.65em;
   }
   .generate--btn {
     font-size: 1.3em;
@@ -499,6 +505,6 @@ button {
     grid-column: span 3;
   }
   .bricktext--container {
-    padding-bottom: 0.5em;
+    padding-bottom: 0.65em;
   }
 }
