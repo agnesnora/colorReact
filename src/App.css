@@ -36,7 +36,9 @@ input {
 }
 .day--night:hover,
 .folder:hover {
-  background-color: #ef38a9;
+  background-color: #cfb7f5;
+  color: #0e1b17;
+  padding: 0.2em;
 }
 .light .generate--btn {
   background-color: #cfb7f5;
